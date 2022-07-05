@@ -46,6 +46,9 @@ function createTodo() {
 
         const deleteButton = document.createElement("i")
         deleteButton.classList.add("todo-icon", "bi-x-square")
+        deleteButton.addEventListener('click', function deleteTodo(event) {
+            todoItem.remove()
+        })
         buttons.appendChild(deleteButton)
 
         todoList.append(todoItem)
