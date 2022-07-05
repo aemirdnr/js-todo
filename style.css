@@ -1,0 +1,61 @@
+.todo-box {
+  padding: 12px;
+  border: solid 1px #eeeeee;
+  border-radius: 15px;
+  -webkit-box-shadow: 0px 2px 2px #acacac;
+          box-shadow: 0px 2px 2px #acacac;
+  -webkit-transition: -webkit-box-shadow 150ms ease-in-out;
+  transition: -webkit-box-shadow 150ms ease-in-out;
+  transition: box-shadow 150ms ease-in-out;
+  transition: box-shadow 150ms ease-in-out, -webkit-box-shadow 150ms ease-in-out;
+}
+
+.todo-box:hover {
+  -webkit-box-shadow: 2px 3px 3px #a0a0a0;
+          box-shadow: 2px 3px 3px #a0a0a0;
+}
+
+.todo-input {
+  border-radius: 15px;
+  padding: 8px;
+}
+
+.todo-input input {
+  width: 100%;
+  background: transparent;
+  border: 0px;
+  outline: none;
+}
+
+.todo-icon {
+  cursor: pointer;
+  font-size: 18px;
+  line-height: 18px;
+  -webkit-transition: -webkit-transform 150ms ease-in;
+  transition: -webkit-transform 150ms ease-in;
+  transition: transform 150ms ease-in;
+  transition: transform 150ms ease-in, -webkit-transform 150ms ease-in;
+}
+
+.todo-icon:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+.todo-icon::before {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+.todo-text {
+  cursor: pointer;
+  -webkit-transition: color 100ms ease-in-out;
+  transition: color 100ms ease-in-out;
+}
+
+.todo-text:hover {
+  color: gray;
+  text-decoration: line-through;
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,39 @@
+.todo-box
+    padding: 12px
+
+    border: solid 1px #eeeeee
+    border-radius: 15px
+
+    box-shadow: 0px 2px 2px #acacac
+    transition: box-shadow 150ms ease-in-out
+    &:hover
+        box-shadow: 2px 3px 3px #a0a0a0
+
+.todo-input
+    border-radius: 15px
+    padding: 8px
+
+    input
+        width: 100%
+
+        background: transparent
+        border: 0px
+        outline: none
+
+.todo-icon
+    cursor: pointer
+    font-size: 18px
+    line-height: 18px
+
+    transition: transform 150ms ease-in
+    &:hover
+        transform: scale(1.05)
+    &::before
+        height: fit-content
+
+.todo-text
+    cursor: pointer
+    transition: color 100ms ease-in-out
+    &:hover
+        color: gray
+        text-decoration: line-through
