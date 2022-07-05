@@ -30,6 +30,11 @@ function createTodo() {
 
         const para = document.createElement("p")
         para.classList.add("todo-text", "m-0", "text-break")
+        para.addEventListener('click', function finishTodo(event) {
+            para.classList.add("todo-text-done")
+            para.classList.remove("todo-text")
+            todoList.after(todoItem)
+        })
         topCol.appendChild(para)
 
         let text = document.createTextNode(todoText.value)
