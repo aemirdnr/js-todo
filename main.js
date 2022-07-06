@@ -1,3 +1,8 @@
+let localList = []
+
+window.addEventListener('load', function load() {
+    getTasks()
+})
 
 function catchEnter(e){
     if (e.keyCode == 13) { // Enter Keycode = 13
@@ -51,10 +56,26 @@ function createTodo() {
         })
         buttons.appendChild(deleteButton)
 
-        todoList.append(todoItem)
+        todoList.append(todoItem) //Insert in UL
+
+        localList.push(todoItem.innerHTML)
+        localStorage.setItem('tasks', JSON.stringify(localList))
 
         todoText.value = "" //Clear #addTodo input
     } else {
         alert("You can't leave the input is empty.")
     }
+}
+
+function getTasks() {
+    const todoList = document.getElementById("todo-list")
+
+    let tasks = Array.from(JSON.parse(localStorage.getItem('tasks'))) //Get tasks from localStorage
+
+    tasks.forEach(task => { //Append every li item on localStorage
+        const li = document.createElement('li')
+        li.classList.add("container", "list-unstyled", "my-3")
+        li.innerHTML = task
+        todoList.appendChild(li)
+    })
 }
